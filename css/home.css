@@ -1,0 +1,127 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  background-image: url('../img/post-bg-desk.jpg');
+  float: left;
+  width: 100%;
+}
+
+.nav {
+  padding-top: 10px;
+  color: #fff;
+  float: left;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.nav .title {
+  float: left;
+  font-size: 30px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.nav .right {
+  float: right;
+  margin: 0 15px 0 0;
+}
+
+.nav .right>a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+
+.intro {
+  padding-top: 30px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.intro .avator {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border-style: solid;
+}
+
+.main {
+  width: 100%;
+  float: left;
+}
+
+.section_header {
+  color: #000;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 15px;
+  line-height: 60px;
+}
+.text-center {
+  text-align: center;
+}
+ .section-body {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+ .section-body .section-item {
+  font-size: 14px;
+  background-color: #fef0ef;
+  padding: 4px;
+  border: 1px solid #f7c7c2;
+  width: 23%;
+  text-decoration: unset;
+  color: inherit;
+  transition: transform 0.4s ease-in-out;
+}
+ .section-body .section-item > img {
+  width: 100%;
+}
+ .section-body .section-item:hover {
+  transform: translateY(-4px);
+}
+
+.footer {
+  font-size: 20px;
+  padding: 50px 0 65px;
+  width: 100%;
+  float: left;
+}
+.footer .center {
+  display: block;
+  text-align: center;
+}
+.footer .center>a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.footer .copy-right {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+}
