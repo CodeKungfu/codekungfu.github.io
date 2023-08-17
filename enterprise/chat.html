@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业站 Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- 导航栏 -->
+<!-- <nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-lg font-semibold">企业名称</a>
+        <ul class="flex space-x-4">
+            <li><a href="#" class="text-white">首页</a></li>
+            <li><a href="#" class="text-white">关于我们</a></li>
+            <li><a href="#" class="text-white">服务</a></li>
+            <li><a href="#" class="text-white">联系我们</a></li>
+        </ul>
+    </div>
+</nav> -->
+
+<nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-lg font-semibold">企业名称</a>
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <ul class="hidden md:flex space-x-4">
+            <li><a href="#" class="text-white">首页</a></li>
+            <li><a href="#" class="text-white">关于我们</a></li>
+            <li><a href="#" class="text-white">服务</a></li>
+            <li><a href="#" class="text-white">联系我们</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 主要内容区域 -->
+<section class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white p-8 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">关于我们</h2>
+        <p class="text-gray-700">我们是一家致力于提供高质量产品和服务的企业。通过创新和合作，我们不断寻求为客户创造价值。</p>
+    </div>
+    <div class="bg-white p-8 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">我们的服务</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>产品开发</li>
+            <li>市场营销咨询</li>
+            <li>技术支持</li>
+            <li>客户培训</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 联系信息 -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-semibold mb-4">联系我们</h2>
+        <p class="text-gray-400">如果您有任何问题或合作意向，请随时联系我们。</p>
+        <p class="mt-4">Email: contact@example.com</p>
+        <p>电话: 123-456-7890</p>
+    </div>
+</footer>
+
+<script>
+    // 响应式导航按钮的交互
+    const menuButton = document.querySelector('.md\\:hidden');
+    const navList = document.querySelector('.hidden.md\\:flex');
+
+    menuButton.addEventListener('click', () => {
+        navList.classList.toggle('hidden');
+    });
+</script>
+
+
+</body>
+</html>
