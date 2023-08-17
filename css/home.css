@@ -31,6 +31,10 @@ body, html {
   margin-left: 30px;
   font-weight: bold;
 }
+.nav .title>a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .nav .right {
   float: right;
@@ -45,6 +49,10 @@ body, html {
   text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
+}
+.nav .right>a:hover {
+  cursor: pointer;
+  color: burlywood
 }
 
 .intro {
