@@ -54,10 +54,10 @@ class Barrage {
     this.barrageList.forEach((val) => {
       //设置弹幕颜色
       this.context.fillStyle = val.color
-      this.context.font = 'bold  ' + val.fontSize+'px "microsoft yahei", sans-serif';
+      this.context.font = 'bold  ' + val.fontSize + 'px "microsoft yahei", sans-serif';
       val.width = val.width || Math.ceil(this.context.measureText(val.value).width),// 校正获取该弹幕占用的宽度
-      // 绘制弹幕位置
-      this.context.fillText(`${val.value} `, val.left, val.top)
+        // 绘制弹幕位置
+        this.context.fillText(`${val.value} `, val.left, val.top)
       // occupation为占用top标志，当弹幕的left(距离canvas左边的位置)+width弹幕自身宽度<屏幕宽度时，说明弹幕已完全展示于屏幕中，可以释放占用的top并插入新值，consumeText函数作用见下文
       val.occupation && val.left + val.width <= this.canvasWidth ? this.consumeText(val) : ''
       // 控制弹幕速度
@@ -134,4 +134,17 @@ function send() {
 }
 function clearFn() {
   barrage.clearBarrage()
+}
+
+function clickEnter(event) {
+  console.log(event.keyCode)
+  if (event.keyCode == 13) {
+    const val = document.getElementById('txt').value;
+    if (val) {
+      barrage.addTest([val])
+      document.getElementById('txt').value = ''
+    } else {
+      alert('弹幕不能为空')
+    }
+  }
 }
