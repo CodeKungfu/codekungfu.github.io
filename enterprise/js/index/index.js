@@ -1,10 +1,18 @@
-// set the default active slide to the first one
 let slideIndex = 1;
 showSlide(slideIndex);
 
-// change slide with the dots
+let timer = setInterval(() => {
+    slideIndex = slideIndex +1
+    showSlide(slideIndex)
+}, 5000)
+
 function currentSlide(n) {
+    timer && clearInterval(timer)
     showSlide(slideIndex = n);
+    timer = setInterval(() => {
+        slideIndex = slideIndex +1
+        showSlide(slideIndex)
+    }, 5000)
 }
 
 function showSlide(n) {
@@ -33,3 +41,16 @@ function showSlide(n) {
     dots[slideIndex - 1].classList.remove('border-opacity-50');
     dots[slideIndex - 1].classList.add('border-white');
 }
+
+function onMouseEnterBanner() {
+    timer && clearInterval(timer)
+}
+function onMouseLeaveBanner() {
+    timer && clearInterval(timer)
+    timer = setInterval(() => {
+        slideIndex = slideIndex +1
+        showSlide(slideIndex)
+    }, 5000)
+}
+document.getElementById("index-banner").addEventListener("mouseenter", onMouseEnterBanner);
+document.getElementById("index-banner").addEventListener("mouseleave", onMouseLeaveBanner);
