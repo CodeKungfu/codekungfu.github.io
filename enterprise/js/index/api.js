@@ -10,6 +10,7 @@ function getRecommended() {
     for (const item of res.data.data) {
       const a = document.createElement("a");
       a.className = 'flex-1 w-full px-2';
+      a.href = `./news-detail.html?id=${item.id}`;
       const child_img = document.createElement("img");
       child_img.className='w-[348px] h-[506px] left-0 shadow';
       child_img.src=item.image;
