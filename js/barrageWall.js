@@ -55,9 +55,9 @@ class Barrage {
       //设置弹幕颜色
       this.context.fillStyle = val.color
       this.context.font = 'bold  ' + val.fontSize + 'px "microsoft yahei", sans-serif';
-      val.width = val.width || Math.ceil(this.context.measureText(val.value).width),// 校正获取该弹幕占用的宽度
-        // 绘制弹幕位置
-        this.context.fillText(`${val.value} `, val.left, val.top)
+      val.width = val.width || Math.ceil(this.context.measureText(val.value).width) // 校正获取该弹幕占用的宽度
+      // 绘制弹幕位置
+      this.context.fillText(`${val.value} `, val.left, val.top)
       // occupation为占用top标志，当弹幕的left(距离canvas左边的位置)+width弹幕自身宽度<屏幕宽度时，说明弹幕已完全展示于屏幕中，可以释放占用的top并插入新值，consumeText函数作用见下文
       val.occupation && val.left + val.width <= this.canvasWidth ? this.consumeText(val) : ''
       // 控制弹幕速度
@@ -98,10 +98,9 @@ class Barrage {
   }
   initTest(text) {
     // 初始化弹幕对象信息
-    let value = text
     let color = ['#E0FFFF', '#FFE1FF', '#FFB5C5', '#F0FFF0', '#BFEFFF', '#63B8FF', '#FFFFFF']
     let barrageTest = {
-      value,// 弹幕值
+      value: text,// 弹幕值
       top: this.highwayAmount.splice(0, 1)[0],
       left: this.canvasWidth,// 弹幕起点
       color: color[Math.floor(Math.random() * 6)],// 弹幕随机颜色
