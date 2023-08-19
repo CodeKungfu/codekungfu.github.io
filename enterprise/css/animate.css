@@ -60,8 +60,8 @@
 
 @-webkit-keyframes text-in-right {
     0% {
-        -webkit-transform: translateX(-1000px);
-        transform: translateX(-1000px);
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
         opacity: 0;
     }
 
@@ -74,8 +74,8 @@
 
 @keyframes text-in-right {
     0% {
-        -webkit-transform: translateX(-1000px);
-        transform: translateX(-1000px);
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
         opacity: 0;
     }
 

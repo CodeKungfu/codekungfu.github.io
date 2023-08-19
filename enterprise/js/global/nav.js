@@ -5,8 +5,10 @@ const navList = document.getElementById('mobile-menu');
 
 openMainMenu.addEventListener('click', () => {
     navList.classList.toggle('hidden');
+    navList.classList.add('text-in-right')
 });
 
 closeMainMenu.addEventListener('click', () => {
     navList.classList.toggle('hidden');
+    navList.classList.remove('text-in-right')
 });
