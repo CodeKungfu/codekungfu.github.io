@@ -18,3 +18,9 @@ svg {
         stroke-dashoffset: 0px;
     }
 }
+
+.team-header {
+    background: url(../images/index/teamtointroduce.png) no-repeat;
+    background-size: 60% auto;
+    background-position: 80% 50%;
+}
