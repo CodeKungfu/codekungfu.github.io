@@ -10,150 +10,126 @@
 </head>
 
 <body>
-  <div class="relative w-full mx-auto">
-    <!-- 头部导航 -->
-    <header class="relative">
-      <div class="absolute top-0 left-0 z-10 w-full">
-        <div class="px-10 md:px-12 py-10 md:py-8 flex items-center justify-between">
-          <a href="./index.html" class="flex items-center">
-            <img class="w-12 md:w-6 h-12 md:h-6" src="./images/index/logo.png" />
-            <span class="ml-3 md:ml-4 text-white text-2xl md:text-xl font-semibold">企业站</span>
+  <!-- 头部导航 -->
+  <header class="relative">
+    <div class="absolute top-0 left-0 z-10 w-full bg-zinc-800">
+      <div class="px-10 md:px-12 py-10 md:py-8 flex items-center justify-between">
+        <a href="./index.html" class="flex items-center">
+          <img class="w-12 md:w-6 h-12 md:h-6" src="./images/index/logo.svg" />
+          <span class="ml-3 md:ml-4 text-white text-2xl md:text-xl font-semibold">企业站</span>
+        </a>
+        <nav class="hidden md:flex xl:mr-36 2xl:mr-48">
+          <a href="./index.html" class="mx-11">
+            <div class="text-white text-sm font-normal">首页</div>
+            <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
           </a>
-          <nav class="hidden md:flex xl:mr-36 2xl:mr-48">
-            <a href="./index.html" class="mx-11">
-              <div class="text-white text-sm font-normal">首页</div>
-              <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
-            </a>
-            <a href="./news.html" class="mx-11">
-              <div class="text-white text-sm font-normal">新闻列表页</div>
-              <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
-            </a>
-            <a href="./aboutus.html" class="mx-11">
-              <div class="text-white text-sm font-normal">关于我们</div>
-              <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
-            </a>
-          </nav>
-          <button id="openMainMenu" class="md:hidden">
-            <img class="w-9 h-9" src="./images/global/nav/open.png">
+          <a href="./news.html" class="mx-11">
+            <div class="text-white text-sm font-normal">新闻列表页</div>
+            <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
+          </a>
+          <a href="./aboutus.html" class="mx-11">
+            <div class="text-white text-sm font-normal">关于我们</div>
+            <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
+          </a>
+        </nav>
+        <button id="openMainMenu" class="md:hidden">
+          <img class="w-9 h-9" src="./images/global/nav/open.png">
+        </button>
+      </div>
+      <!--移动端导航-->
+      <div id="mobile-menu" class="hidden md:hidden fixed w-9/12 h-full top-0 right-0 bg-zinc-800">
+        <div class="absolute top-10 right-10">
+          <button id="closeMainMenu" class="md:hidden">
+            <img class="w-9 h-9" src="./images/global/nav/close.png">
           </button>
         </div>
-        <!--移动端导航-->
-        <div id="mobile-menu" class="hidden md:hidden fixed w-9/12 h-full top-0 right-0 bg-zinc-800">
-          <div class="absolute top-10 right-10">
-            <button id="closeMainMenu" class="md:hidden">
-              <img class="w-9 h-9" src="./images/global/nav/close.png">
-            </button>
-          </div>
-          <nav class="flex flex-col">
-            <a href="./index.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">首页</a>
-            <a href="./news.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">新闻列表页</a>
-            <a href="./aboutus.html" class="mx-14 py-24 text-white text-2xl indent-4">关于我们</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <div class="news-list relative">
-      <div class="relative h-[]">
-
-      </div>
-      <img class="left-[533px] top-[136px] absolute text-white text-9xl font-normal"
-        src="./images/index/newslistpage.png">
-      <div class="left-[840px] top-[218px] absolute text-black text-5xl font-normal">新闻列表页</div>
-      <div class="w-32 h-1.5 left-[896px] top-[311px] absolute bg-orange-600"></div>
-
-      <div class="news-items relative">
-        <div class="w-[348px] h-[506px] left-[165px] top-[371px] absolute">
-          <div class="w-[348px] h-[506px] left-0 top-0 absolute bg-zinc-300"></div>
-          <img class="w-[348px] h-[506px] left-0 top-0 absolute blur-[134px]" src="./images/news/n1.png">
-        </div>
-        <div class="w-[348px] left-[165px] top-[913px] absolute text-black text-xl font-semibold leading-9">
-          2022百度AI大会前夕，解读百度大脑的半年“豹变”</div>
-        <div class="w-[348px] left-[165px] top-[1013px] absolute text-neutral-700 text-sm font-normal leading-7">
-          Facebook为未来的VR社交打造了一款逼真的虚拟头像系统，该系统的特点是，利用数百颗摄像头对人脸进行动作捕捉，并能生成与人脸相似度很高的虚拟头像，这些头像还能模仿人脸的大量表情。</div>
-      </div>
-      <!-- <div class="w-full md:w-[1590px] mx-auto grid grid-cols-2 md:grid-cols-4 md:pb-[32px]">
-        <a class="flex-1 w-full px-2" href="/enterprise-website/newsDetail?id=1" target="_blank">
-         		<img class="w-[348px] h-[506px] left-0 shadow" src="./images/index/news2.png">
-         		<div class="w-[348px] left-0 text-white text-xl font-semibold leading-9">支持触觉反馈，Manus VR推出全新Prime VR手套</div>
-           		<div class="w-[348px] left-0 text-white text-sm font-normal leading-7">
-           			第三届国际印刷工业发展论坛（Forum-PI 2013）于2013年5月13日在北京举行，主办方邀请了来自中国、美国、德国、英国、意大利、日本、澳大利亚、俄罗斯、印度、印尼、南非、巴西、
-           		</div>
-          </a>
-      </div> -->
-    </div>
-
-    <div class="page">
-      <div class="left-[680px] top-[1987px] absolute justify-start items-center gap-4 inline-flex">
-        <div class="pl-4 pr-3 py-1 rounded-sm border border-zinc-200 justify-start items-center gap-3 flex">
-          <div class="justify-start items-start gap-[3px] flex">
-            <div class="text-zinc-500 text-sm font-normal leading-normal">8</div>
-            <div class="text-zinc-500 text-sm font-normal leading-normal">条/页</div>
-          </div>
-          <div class="w-3.5 h-3.5 relative"></div>
-        </div>
-        <div class="justify-start items-start flex">
-          <div class="p-[9px] flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="w-3.5 h-3.5 relative"></div>
-          </div>
-          <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="text-center text-orange-600 text-sm font-bold leading-normal">1</div>
-          </div>
-          <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="text-center text-zinc-500 text-sm font-normal leading-normal">2</div>
-          </div>
-          <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="text-center text-zinc-500 text-sm font-normal leading-normal">3</div>
-          </div>
-          <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
-          </div>
-          <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="text-center text-zinc-500 text-sm font-normal leading-normal">5</div>
-          </div>
-          <div class="p-[9px] relative">
-            <div class="left-[0px] top-[0px] absolute text-center text-zinc-500 text-base font-normal leading-normal">
-              ...</div>
-          </div>
-          <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="text-center text-zinc-500 text-sm font-normal leading-normal">100</div>
-          </div>
-          <div class="p-[9px] flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="w-3.5 h-3.5 relative"></div>
-          </div>
-        </div>
-        <div class="h-8 rounded-sm justify-center items-center gap-2 flex">
-          <div class="text-zinc-500 text-sm font-normal leading-normal">前往</div>
-          <div
-            class="px-2 py-1 rounded-sm border border-zinc-200 flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
-          </div>
-          <div class="text-zinc-500 text-sm font-normal leading-normal">页</div>
-        </div>
+        <nav class="flex flex-col">
+          <a href="./index.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">首页</a>
+          <a href="./news.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">新闻列表页</a>
+          <a href="./aboutus.html" class="mx-14 py-24 text-white text-2xl indent-4">关于我们</a>
+        </nav>
       </div>
     </div>
-
-    <div class="footer w-full h-[218px]">
-      <div class="w-full h-[218px] left-0 top-[2073px] absolute bg-orange-600"></div>
-      <div class="w-[984px] h-6 left-[468px] top-[2121px] absolute">
-        <div class="w-[358px] h-6 left-0 top-0 absolute text-white text-base font-semibold">
-          地址：中国山东省青岛市市南区某某中路20号</div>
-        <div class="w-62 h-6 left-[486px] top-0 absolute text-white text-base font-semibold">
-          邮箱：1370XXX171@qq.com</div>
-        <div class="w-[182px] h-6 left-[822px] top-0 absolute text-white text-base font-semibold">
-          电话：0591-88888888</div>
+  </header>
+  <div class="relative">
+    <div class="pt-48 md:pt-32 pb-12 relative">
+      <img class="w-[46.67%] ml-[27.76%]" src="./images/index/newslistpage.png">
+      <div class="text-center relative -mt-20">
+        <div class="w-full text-black text-5xl font-normal">新闻列表页</div>
+        <div class="w-32 h-1.5 mx-auto mt-8 bg-orange-600 "></div>
       </div>
-      <div class="w-[798px] left-[561px] top-[2193px] absolute">
-        <div class="w-[758px] h-[18px] left-[62px] top-[16px] absolute text-white text-base font-semibold">
-          Copyright ©
-          2009 - 2022 Cld , All Rights Reserved 某某网络科技有限公司 版权所有 陕ICP备xxxxxxx号</div>
-        <img class="w-[50px] h-[50px] left-0 top-0 absolute" src="./images/index/ewm.png">
+    </div>
+    <div class="w-10/12 mx-auto">
+      <div id="news-list" class="grid gap-y-10 grid-cols-2 md:grid-cols-4">
       </div>
     </div>
   </div>
+  <div class="relative text-center py-12">
+    <div class="justify-start items-center gap-4 inline-flex">
+      <div class="pl-4 pr-3 py-1 rounded-sm border border-zinc-200 justify-start items-center gap-3 flex">
+        <div class="justify-start items-start gap-1 flex">
+          <div class="text-zinc-500 text-sm font-normal leading-normal">8</div>
+          <div class="text-zinc-500 text-sm font-normal leading-normal">条/页</div>
+        </div>
+        <div class="w-3.5 h-3.5 relative"></div>
+      </div>
+      <div class="justify-start items-start flex">
+        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="w-3.5 h-3.5 relative">
+            <img src="./images/global/pagenation/arrow-left.png" />
+          </div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-orange-600 text-sm font-bold leading-normal">1</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">2</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">3</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">5</div>
+        </div>
+        <div class="p-2 relative">
+          <div class="left-0 top-0 absolute text-center text-zinc-500 text-base font-normal leading-normal">...</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">100</div>
+        </div>
+        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="w-3.5 h-3.5 relative">
+            <img class="rotate-180" src="./images/global/pagenation/arrow-left.png" />
+          </div>
+        </div>
+      </div>
+      <div class="h-8 rounded-sm justify-center items-center gap-2 flex">
+        <div class="text-zinc-500 text-sm font-normal leading-normal">前往</div>
+        <div class="px-2 py-1 rounded-sm border border-zinc-200 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
+        </div>
+        <div class="text-zinc-500 text-sm font-normal leading-normal">页</div>
+      </div>
+    </div>
+  </div>
+  <footer class="w-full relative bg-orange-600 py-12 px-8">
+		<div class="flex flex-col md:flex-row md:flex-wrap items-start md:items-center justify-center">
+			<div class="md:mr-44 text-white text-base font-semibold">地址：中国山东省青岛市市南区某某中路20号</div>
+			<div class="md:mr-24 text-white text-base font-semibold">邮箱：1370XXX171@qq.com</div>
+			<div class="text-white text-base font-semibold">电话：0591-88888888</div>
+		</div>
+		<div class="relative flex items-center md:justify-center mx-auto mt-12">
+			<img class="w-[50px] h-[50px] mr-3" src="./images/index/ewm.png">
+			<div class="text-white text-sm md:text-base md:font-semibold">Copyright ©2009 - 2022 Cld , All Rights Reserved 某某网络科技有限公司
+				版权所有 陕ICP备xxxxxxx号</div>
+		</div>
+	</footer>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./js/global/nav.js"></script>
-  <script src="./js/news/index.js"></script>
+  <!-- <script src="./js/news/index.js"></script> -->
   <script src="./js/news/api.js"></script>
 </body>
 

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>企业站</title>
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <header class="relative">
+    <div class="absolute top-0 left-0 z-10 w-full bg-zinc-800">
+      <div class="px-10 md:px-12 py-10 md:py-8 flex items-center justify-between">
+        <a href="./index.html" class="flex items-center">
+          <img class="w-12 md:w-6 h-12 md:h-6" src="./images/index/logo.svg" />
+          <span class="ml-3 md:ml-4 text-white text-2xl md:text-xl font-semibold">企业站</span>
+        </a>
+        <nav class="hidden md:flex xl:mr-36 2xl:mr-48">
+          <a href="./index.html" class="mx-11">
+            <div class="text-white text-sm font-normal">首页</div>
+            <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
+          </a>
+          <a href="./news.html" class="mx-11">
+            <div class="text-white text-sm font-normal">新闻列表页</div>
+            <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
+          </a>
+          <a href="./aboutus.html" class="mx-11">
+            <div class="text-white text-sm font-normal">关于我们</div>
+            <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
+          </a>
+        </nav>
+        <button id="openMainMenu" class="md:hidden">
+          <img class="w-9 h-9" src="./images/global/nav/open.png">
+        </button>
+      </div>
+      <!--移动端导航-->
+      <div id="mobile-menu" class="hidden md:hidden fixed w-9/12 h-full top-0 right-0 bg-zinc-800">
+        <div class="absolute top-10 right-10">
+          <button id="closeMainMenu" class="md:hidden">
+            <img class="w-9 h-9" src="./images/global/nav/close.png">
+          </button>
+        </div>
+        <nav class="flex flex-col">
+          <a href="./index.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">首页</a>
+          <a href="./news.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">新闻列表页</a>
+          <a href="./aboutus.html" class="mx-14 py-24 text-white text-2xl indent-4">关于我们</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="relative">
+    <div class="pt-48 md:pt-32 pb-12 relative">
+      <img class="w-[46.67%] ml-[27.76%]" src="./images/index/newslistpage.png">
+      <div class="text-center relative -mt-20">
+        <div class="w-full text-black text-5xl font-normal">新闻列表页</div>
+        <div class="w-32 h-1.5 mx-auto mt-8 bg-orange-600 "></div>
+      </div>
+    </div>
+    <div class="w-10/12 mx-auto">
+      <div id="news-list" class="grid gap-y-10 grid-cols-2 md:grid-cols-4">
+        <!-- <a class="px-2 lg:px-3 xl:px-4" href="/enterprise-website/newsDetail?id=1" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative overflow-hidden">
+            <img class="news-preview" src="./images/news/n1.png" alt="" style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full" src="./images/news/n1.png" alt="">
+          </div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">022百度AI大会前夕，解读百度大脑的半年“豹变”</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            照以广持上争建只回电那度十再也。维口想矿型区信低常华无当九布往高。见目动界打研开局由今方品转往装。列积消采着行经委张断织争光采参边。设真式音界节它选性理关指期适亲产相。合特非车受没层须得两理许产。</div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4" href="/enterprise-website/newsDetail?id=2" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative">
+            <img class="news-preview" src="./images/news/n1.png" alt="" style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full" src="./images/news/n1.png" alt="">
+          </div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">022百度AI大会前夕，解读百度大脑的半年“豹变”</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            指保路阶联认专水断那这酸目斯派除。眼办近她部风断由断美形如复眼儿起做。向厂不生结关于队动世还它运维广标。则治米图代统面须众资今交断无备。响转感工许状精力小回们全表。</div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4" href="/enterprise-website/newsDetail?id=3" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative" style="overflow: hidden;">
+            <img class="news-preview" src="./images/news/n1.png" alt="" style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full" src="./images/news/n1.png" alt="">
+          </div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">于学各清极划说光制标位长里走公型为器认整</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            积再细证习最动生矿统价适完。我业命青们了有据质下价化格也。更例但主反做律相安律教六现文外识然。转值种叫细速强京快米带马装求定。</div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4 " href="/enterprise-website/newsDetail?id=4" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative" style="overflow: hidden;">
+            <img class="news-preview" src="./images/news/n1.png" alt="" style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full" src="./images/news/n1.png" alt="">
+          </div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">矿线精常它山最易则少带元会都区农更问则满</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            信又办制都基包族酸存千再身华。年叫县子般县员带电交清给解。给所从管验每领位如记太较前委资。动志三本分人米界从规那气按于。</div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4"
+          href="/enterprise-website/newsDetail?id=5" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative" style="overflow: hidden;">
+            <img class="news-preview"
+              src="./images/news/n1.png" alt="记引导验知装级取特级极人置织价后工设白调"
+               style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full"
+              src="./images/news/n1.png" alt="记引导验知装级取特级极人置织价后工设白调"
+              ></div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">记引导验知装级取特级极人置织价后工设白调</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            住复还西专她万战单约点须物。置运以他南很入每声目政说作么张容叫生。九果照民当才比质界划存热代入。西花影下或发度例成组置活一我红复手。越到组通月数节质利干状风更划者角命存。</div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4"
+          href="/enterprise-website/newsDetail?id=6" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative" style="overflow: hidden;">
+            <img class="news-preview"
+              src="./images/news/n1.png" alt="后七图不干整响给造何又难又战高天算第矿民"
+               style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full"
+              src="./images/news/n1.png" alt="后七图不干整响给造何又难又战高天算第矿民"
+              ></div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">后七图不干整响给造何又难又战高天算第矿民</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            容格者亲两统般矿管文团参以光三。许经写则造到一构示与保大族例法。空战反他消王思律权流器感格近况业写。义道样政证展年你圆该也需资没拉应查无。给这具数广体无地中支证西维快导公果适。单队八如青山交各由回场这。开科设书般广解科酸先信志东。
+          </div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4"
+          href="/enterprise-website/newsDetail?id=7" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative" style="overflow: hidden;">
+            <img class="news-preview"
+              src="./images/news/n1.png" alt="半又过节改气外量见必革元已平证给后前从技"
+               style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full"
+              src="./images/news/n1.png" alt="半又过节改气外量见必革元已平证给后前从技"
+              ></div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">半又过节改气外量见必革元已平证给后前从技</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            史确研道阶二几处现法日技火志回。走示基该院少我体国段者构就果日。情照这但厂厂斗种第如级定气阶标品报。回起化象包来水节片养群机是。成议决其周用立为何光划重制和眼。热常料办效元话你织路决位克度革根酸。根大火传干到数因半越和农什真最多。
+          </div>
+        </a>
+        <a class="px-2 lg:px-3 xl:px-4"
+          href="/enterprise-website/newsDetail?id=8" target="_blank" data-into-view="true" data-load="true">
+          <div class="relative" style="overflow: hidden;">
+            <img class="news-preview"
+              src="./images/news/n1.png" alt="少证公求参包信理存区节边听构期九养并比识"
+               style="filter: blur(10px);">
+            <img class="news-image absolute top-0 left-0 w-full h-full"
+              src="./images/news/n1.png" alt="少证公求参包信理存区节边听构期九养并比识"
+              ></div>
+          <div class="news-title with-2-col text-black text-xl font-semibold mt-6 md:mt-9">少证公求参包信理存区节边听构期九养并比识</div>
+          <div class="news-content with-4-col text-black text-sm font-normal mt-6">
+            研她起打术观习结打住消间细消。根入处先任候很关名省图局清先委。由增族问政更北究适只千都合受确。务米局行花族意府日向局织照影信层长。非斯儿因老林心历自写省保志那被。选保从公府得际包无必领造研。</div>
+        </a> -->
+      </div>
+    </div>
+  </div>
+  <div class="relative text-center py-12">
+    <div class="justify-start items-center gap-4 inline-flex">
+      <div class="pl-4 pr-3 py-1 rounded-sm border border-zinc-200 justify-start items-center gap-3 flex">
+        <div class="justify-start items-start gap-1 flex">
+          <div class="text-zinc-500 text-sm font-normal leading-normal">8</div>
+          <div class="text-zinc-500 text-sm font-normal leading-normal">条/页</div>
+        </div>
+        <div class="w-3.5 h-3.5 relative"></div>
+      </div>
+      <div class="justify-start items-start flex">
+        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="w-3.5 h-3.5 relative">
+            <img src="./images/global/pagenation/arrow-left.png" />
+          </div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-orange-600 text-sm font-bold leading-normal">1</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">2</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">3</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">5</div>
+        </div>
+        <div class="p-2 relative">
+          <div class="left-0 top-0 absolute text-center text-zinc-500 text-base font-normal leading-normal">...</div>
+        </div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">100</div>
+        </div>
+        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="w-3.5 h-3.5 relative">
+            <img class="rotate-180" src="./images/global/pagenation/arrow-left.png" />
+          </div>
+        </div>
+      </div>
+      <div class="h-8 rounded-sm justify-center items-center gap-2 flex">
+        <div class="text-zinc-500 text-sm font-normal leading-normal">前往</div>
+        <div class="px-2 py-1 rounded-sm border border-zinc-200 flex-col justify-start items-start gap-2.5 inline-flex">
+          <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
+        </div>
+        <div class="text-zinc-500 text-sm font-normal leading-normal">页</div>
+      </div>
+    </div>
+  </div>
+  <footer class="w-full relative bg-orange-600 py-12 px-8">
+		<div class="flex flex-col md:flex-row md:flex-wrap items-start md:items-center justify-center">
+			<div class="md:mr-44 text-white text-base font-semibold">地址：中国山东省青岛市市南区某某中路20号</div>
+			<div class="md:mr-24 text-white text-base font-semibold">邮箱：1370XXX171@qq.com</div>
+			<div class="text-white text-base font-semibold">电话：0591-88888888</div>
+		</div>
+		<div class="relative flex items-center md:justify-center mx-auto mt-12">
+			<img class="w-[50px] h-[50px] mr-3" src="./images/index/ewm.png">
+			<div class="text-white text-sm md:text-base md:font-semibold">Copyright ©2009 - 2022 Cld , All Rights Reserved 某某网络科技有限公司
+				版权所有 陕ICP备xxxxxxx号</div>
+		</div>
+	</footer>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/global/nav.js"></script>
+  <!-- <script src="./js/news/index.js"></script> -->
+  <script src="./js/news/api.js"></script>
+</body>
+
+</html>

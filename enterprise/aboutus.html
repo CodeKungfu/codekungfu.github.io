@@ -9,105 +9,105 @@
   <title>企业站</title>
 </head>
 
-<body>
-  <div class="relative w-full mx-auto">
-    <!-- 头部导航 -->
-    <header class="relative">
-      <div class="absolute top-0 left-0 z-10 w-full">
-        <div class="px-10 md:px-12 py-10 md:py-8 flex items-center justify-between">
-          <a href="./index.html" class="flex items-center">
-            <img class="w-12 md:w-6 h-12 md:h-6" src="./images/index/logo.png" />
-            <span class="ml-3 md:ml-4 text-white text-2xl md:text-xl font-semibold">企业站</span>
+<body class="flex flex-col min-h-[100vh]">
+  <!-- 头部导航 -->
+  <header class="relative">
+    <div class="absolute top-0 left-0 z-10 w-full bg-zinc-800">
+      <div class="px-10 md:px-12 py-10 md:py-8 flex items-center justify-between">
+        <a href="./index.html" class="flex items-center">
+          <img class="w-12 md:w-6 h-12 md:h-6" src="./images/index/logo.svg" />
+          <span class="ml-3 md:ml-4 text-white text-2xl md:text-xl font-semibold">企业站</span>
+        </a>
+        <nav class="hidden md:flex xl:mr-36 2xl:mr-48">
+          <a href="./index.html" class="mx-11">
+            <div class="text-white text-sm font-normal">首页</div>
+            <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
           </a>
-          <nav class="hidden md:flex xl:mr-36 2xl:mr-48">
-            <a href="./index.html" class="mx-11">
-              <div class="text-white text-sm font-normal">首页</div>
-              <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
-            </a>
-            <a href="./news.html" class="mx-11">
-              <div class="text-white text-sm font-normal">新闻列表页</div>
-              <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
-            </a>
-            <a href="./aboutus.html" class="mx-11">
-              <div class="text-white text-sm font-normal">关于我们</div>
-              <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
-            </a>
-          </nav>
-          <button id="openMainMenu" class="md:hidden">
-            <img class="w-9 h-9" src="./images/global/nav/open.png">
+          <a href="./news.html" class="mx-11">
+            <div class="text-white text-sm font-normal">新闻列表页</div>
+            <!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
+          </a>
+          <a href="./aboutus.html" class="mx-11">
+            <div class="text-white text-sm font-normal">关于我们</div>
+            <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
+          </a>
+        </nav>
+        <button id="openMainMenu" class="md:hidden">
+          <img class="w-9 h-9" src="./images/global/nav/open.png">
+        </button>
+      </div>
+      <!--移动端导航-->
+      <div id="mobile-menu" class="hidden md:hidden fixed w-9/12 h-full top-0 right-0 bg-zinc-800">
+        <div class="absolute top-10 right-10">
+          <button id="closeMainMenu" class="md:hidden">
+            <img class="w-9 h-9" src="./images/global/nav/close.png">
           </button>
         </div>
-        <!--移动端导航-->
-        <div id="mobile-menu" class="hidden md:hidden fixed w-9/12 h-full top-0 right-0 bg-zinc-800">
-          <div class="absolute top-10 right-10">
-            <button id="closeMainMenu" class="md:hidden">
-              <img class="w-9 h-9" src="./images/global/nav/close.png">
-            </button>
-          </div>
-          <nav class="flex flex-col">
-            <a href="./index.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">首页</a>
-            <a href="./news.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">新闻列表页</a>
-            <a href="./aboutus.html" class="mx-14 py-24 text-white text-2xl indent-4">关于我们</a>
-          </nav>
-        </div>
+        <nav class="flex flex-col">
+          <a href="./index.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">首页</a>
+          <a href="./news.html" class="mx-14 py-24 border-b-2 border-[#333333] text-white text-2xl indent-4">新闻列表页</a>
+          <a href="./aboutus.html" class="mx-14 py-24 text-white text-2xl indent-4">关于我们</a>
+        </nav>
       </div>
-    </header>
-
-    <div class="main">
-      <img class="left-[820px] top-[136px] absolute" src="./images/index/aboutus.png">
-      <div class="left-[864px] top-[218px] absolute text-black text-5xl font-normal">关于我们</div>
-      <div class="w-32 h-1.5 left-[896px] top-[311px] absolute bg-orange-600"></div>
-      <div class="main-body">
-        <!-- <img class="w-[750px] h-[309px] left-[180px] top-[371px] absolute" src="./images/aboutus/map.png"> -->
-        <div class="w-[750px] h-[309px] left-[180px] top-[371px] absolute">
+    </div>
+  </header>
+  <div class="flex-auto">
+    <div class="pt-48 md:pt-32 pb-12 relative">
+      <img class="w-[46.67%] ml-[27.76%]" src="./images/index/aboutus.png">
+      <div class="text-center relative -mt-16">
+        <div class="w-full text-black text-5xl font-normal">关于我们</div>
+        <div class="w-32 h-1.5 mx-auto mt-8 bg-orange-600 "></div>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-stretch md:mb-28">
+      <div class="flex-1 md:px-9">
           <iframe
               src="https://m.amap.com/navi/?dest=119.24119,26.052971&destName=特力林科技大厦&hideRouteIcon=1&key=7b5c858daf93598c268869551fdd9b2d"
               frameborder="0"
-              class="w-full h-full"
-            ></iframe>
-        </div>
-        <div class="w-[385px] left-[966px] top-[371px] absolute text-black text-2xl font-semibold leading-7">
-          一家专注系统高端定制开发的公司
-        </div>
-        <div
-          class="w-[774px] h-[140px] left-[966px] top-[423px] absolute text-neutral-700 text-sm font-normal leading-7">
-          互联网指的是是网络与网络之间所串连成的庞大网络，这些网络以一组通用的协议相连，形成逻辑上的单一巨大国际网络。<br>互联网始于1969年美国的阿帕网。这种将计算机网络互相联接在一起的方法可称作“网络互联”，在这基础上发展出覆盖全世界的全球性互联网络称互联网，即是互相连接一起的网络结构。<br>我们出色的专业开发团队扎实的技术支持，优质高效的服务意识和丰厚的资源优势，提供专业的网站建设，微信小程序，APP开发，等技术服务。成果，专注于为客户提供专业有效的互联网系统解决方案。
-          <br><br>
-        </div>
-        <div class="w-[360px] h-[93px] left-[966px] top-[587px] absolute">
-          <div class="w-[332px] h-5 left-[28px] top-0 absolute text-neutral-700 text-sm font-normal">
-            地址：中国山东省青岛市市南区某某中路20号
-          </div>
-          <div class="w-[202px] h-5 left-[28px] top-[36px] absolute text-neutral-700 text-sm font-normal">
-            邮箱：1370XXX171@qq.com</div>
-          <div class="w-[162px] h-5 left-[28px] top-[73px] absolute text-neutral-700 text-sm font-normal">
-            电话：0591-88888888
-          </div>
-          <div class="w-4 h-4 left-0 top-0 absolute"></div>
-          <div class="w-3.5 h-3.5 left-[1px] top-[39px] absolute"></div>
-          <div class="w-4 h-4 left-0 top-[75px] absolute"></div>
-        </div>
+              class="w-full h-80 md:h-full"
+            >
+          </iframe>
       </div>
-    </div>
-
-    <div class="footer w-full h-[218px]">
-      <div class="w-full h-[218px] left-0 top-[2073px] absolute bg-orange-600"></div>
-      <div class="w-[984px] h-6 left-[468px] top-[2121px] absolute">
-        <div class="w-[358px] h-6 left-0 top-0 absolute text-white text-base font-semibold">
-          地址：中国山东省青岛市市南区某某中路20号</div>
-        <div class="w-62 h-6 left-[486px] top-0 absolute text-white text-base font-semibold">
-          邮箱：1370XXX171@qq.com</div>
-        <div class="w-[182px] h-6 left-[822px] top-0 absolute text-white text-base font-semibold">
-          电话：0591-88888888</div>
-      </div>
-      <div class="w-[798px] left-[561px] top-[2193px] absolute">
-        <div class="w-[758px] h-[18px] left-[62px] top-[16px] absolute text-white text-base font-semibold">
-          Copyright ©
-          2009 - 2022 Cld , All Rights Reserved 某某网络科技有限公司 版权所有 陕ICP备xxxxxxx号</div>
-        <img class="w-[50px] h-[50px] left-0 top-0 absolute" src="./images/index/ewm.png">
+      <div class="flex-1 md:pr-9">
+        <div class="">
+          <div class="text-black text-2xl font-semibold leading-7">一家专注系统高端定制开发的公司</div>
+          <div class="mt-6 text-neutral-700 text-sm font-normal leading-7">
+            互联网指的是是网络与网络之间所串连成的庞大网络，这些网络以一组通用的协议相连，形成逻辑上的单一巨大国际网络。<br>互联网始于1969年美国的阿帕网。这种将计算机网络互相联接在一起的方法可称作“网络互联”，在这基础上发展出覆盖全世界的全球性互联网络称互联网，即是互相连接一起的网络结构。<br>我们出色的专业开发团队扎实的技术支持，优质高效的服务意识和丰厚的资源优势，提供专业的网站建设，微信小程序，APP开发，等技术服务。成果，专注于为客户提供专业有效的互联网系统解决方案。
+          </div>
+          <div class="mt-6 flex items-center">
+            <img class="mr-3" src="./images/aboutus/location.png" alt="">
+            <div class="text-neutral-700 text-sm font-normal">
+              地址：中国山东省青岛市市南区某某中路20号
+            </div>
+          </div>
+          <div class="mt-6 flex items-center">
+            <img class="mr-3" src="./images/aboutus/email.png" alt="">
+            <div class="text-neutral-700 text-sm font-normal">
+              邮箱：1370XXX171@qq.com
+            </div>
+          </div>
+          <div class="mt-6 flex items-center">
+            <img class="mr-3" src="./images/aboutus/phone.png" alt="">
+            <div class="text-neutral-700 text-sm font-normal">
+              电话：0591-88888888
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <footer class="w-full relative bg-orange-600 py-12 px-8">
+		<div class="flex flex-col md:flex-row md:flex-wrap items-start md:items-center justify-center">
+			<div class="md:mr-44 text-white text-base font-semibold">地址：中国山东省青岛市市南区某某中路20号</div>
+			<div class="md:mr-24 text-white text-base font-semibold">邮箱：1370XXX171@qq.com</div>
+			<div class="text-white text-base font-semibold">电话：0591-88888888</div>
+		</div>
+		<div class="relative flex items-center md:justify-center mx-auto mt-12">
+			<img class="w-[50px] h-[50px] mr-3" src="./images/index/ewm.png">
+			<div class="text-white text-sm md:text-base md:font-semibold">Copyright ©2009 - 2022 Cld , All Rights Reserved 某某网络科技有限公司
+				版权所有 陕ICP备xxxxxxx号</div>
+		</div>
+	</footer>
   <script src="./js/global/nav.js"></script>
 </body>
 
