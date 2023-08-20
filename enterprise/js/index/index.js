@@ -6,13 +6,24 @@ let timer = setInterval(() => {
     showSlide(slideIndex)
 }, 5000)
 
+let timerDot = null
+
 function currentSlide(n) {
     timer && clearInterval(timer)
-    showSlide(slideIndex = n);
+    slideIndex = n
+    showSlide(n)
     timer = setInterval(() => {
         slideIndex = slideIndex +1
         showSlide(slideIndex)
     }, 5000)
+}
+
+function drawDot() {
+    if (!timerDot) {
+        timerDot = setInterval(() => {
+
+        }, 1000)
+    }
 }
 
 function showSlide(n) {
@@ -30,16 +41,24 @@ function showSlide(n) {
 
     // remove active status from all dots
     for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('border-white');
-        dots[i].classList.add('border-opacity-50');
+        dots[i].classList.remove('progress');
+        dots[i].parentNode.classList.remove('w-5');
+        dots[i].parentNode.classList.remove('h-5');
+        if (slideIndex - 1 === i) {
+            if (!dots[i].parentNode.classList.contains('w-5')) {
+                dots[i].parentNode.classList.add('w-5')
+            }
+            if (!dots[i].parentNode.classList.contains('h-5')) {
+                dots[i].parentNode.classList.add('h-5')
+            }
+        }
     }
 
     // show the active slide
     slides[slideIndex - 1].classList.remove('hidden');
 
     // highlight the active dot
-    dots[slideIndex - 1].classList.remove('border-opacity-50');
-    dots[slideIndex - 1].classList.add('border-white');
+    dots[slideIndex - 1].classList.add('progress');
 }
 
 function onMouseEnterBanner() {

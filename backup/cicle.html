@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>圆环进度条</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width;initial-scale=1.0" />
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .circle-progress {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #888;
+        }
+        
+        .content {
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            right: 0;
+        }
+        
+        .circle {
+            position: absolute;
+            margin: 0;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 20px solid red;
+            /* transform: rotate(135deg); */
+        }
+        
+        .left-circle {
+            left: 0;
+            border-top-color: green;
+            border-left-color: green;
+            animation: circle-left 5s linear infinite;
+        }
+        
+        .right-circle {
+            right: 0;
+            border-bottom-color: green;
+            border-right-color: green;
+            animation: circle-right 5s linear infinite;
+        }
+        
+        @keyframes circle-right {
+            0% {
+                transform: rotate(135deg);
+            }
+            50%,
+            100% {
+                transform: rotate(315deg);
+            }
+        }
+        
+        @keyframes circle-left {
+            0%,
+            50% {
+                transform: rotate(135deg);
+            }
+            100% {
+                transform: rotate(315deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle-progress">
+        <div class="content left">
+            <div class="circle left-circle"></div>
+        </div>
+        <div class="content right">
+            <div class="circle right-circle" style="transform: rotate(315deg);
+            right: 0;"></div>
+        </div>
+    </div>
+</body>
+
+</html>

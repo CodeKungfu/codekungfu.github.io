@@ -20,7 +20,7 @@
 					<img class="w-12 md:w-6 h-12 md:h-6" src="./images/index/logo.png" />
 					<span class="ml-3 md:ml-4 text-white text-2xl md:text-xl font-semibold">企业站</span>
 				</a>
-				<nav class="hidden md:flex items-center xl:mr-36 2xl:mr-48">
+				<nav class="hidden md:flex xl:mr-36 2xl:mr-48">
 					<a href="./index.html" class="mx-11">
 						<div class="text-white text-sm font-normal">首页</div>
 						<div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
@@ -56,50 +56,46 @@
 
 	<!-- banner -->
 	<section class="relative" id="index-banner">
-		<div class="slide flex">
-			<img class="w-full h-[270px] md:h-[800px] object-cover" src="./images/index/banner.png">
-			<div
-				class="w-full text-center top-[173.5px] md:top-[272px] absolute  text-white text-[24px] md:text-[80px] font-semibold">
-				开启互联网+ 从我们开始</div>
-			<div
-				class="w-full text-center top-[211.5px] md:top-[406px] absolute  text-white text-[10px] md:text-4xl font-normal line-clamp-2">
-				<div class="w-10/12 mx-auto">
-					域名主机，网站建设，云服务器，企业邮箱一站式解决
+		<div class="slide relative">
+			<img class="w-full object-cover" src="./images/index/banner.png">
+			<div class="absolute top-[34%] w-full">
+				<div class="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold text-center">开启互联网+ 从我们开始</div>
+				<div class="text-white mt-7 text-xl md:text-1xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-normal">
+					<div class="w-[78%] mx-auto text-center">域名主机，网站建设，云服务器，企业邮箱一站式解决</div>
 				</div>
 			</div>
 		</div>
-		<div class="hidden slide flex">
-			<img class="w-full h-[270px] md:h-[800px] object-cover" src="./images/index/banner1.png">
-			<div
-				class="w-full text-center top-[173.5px] md:top-[272px] absolute  text-white text-[24px] md:text-[80px] font-semibold">
-				新闻中心</div>
-			<div
-				class="w-full text-center top-[211.5px] md:top-[406px] absolute  text-white text-[10px] md:text-4xl font-normal line-clamp-2">
-				<div class="w-10/12 mx-auto">
-					几乎所有的伟大成就，都是团队集体协作追求远大目标的结果。这些团队的领导者挑选了团队的成员，并激励他们追求自己不敢想象的成就。
+		<div class="slide relative">
+			<img class="w-full object-cover" src="./images/index/banner.png">
+			<div class="absolute top-[34%] w-full">
+				<div class="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold text-center">新闻中心</div>
+				<div class="text-white mt-7 text-xl md:text-1xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-normal">
+					<div class="w-[78%] mx-auto">几乎所有的伟大成就，都是团队集体协作追求远大目标的结果。这些团队的领导者挑选了团队的成员，并激励他们追求自己不敢想象的成就。</div>
 				</div>
 			</div>
 		</div>
-		<div class="hidden slide flex">
-			<img class="w-full h-[270px] md:h-[800px] object-cover" src="./images/index/banner2.png">
-			<div
-				class="w-full text-center top-[173.5px] md:top-[272px] absolute  text-white text-[24px] md:text-[80px] font-semibold">
-				关于我们</div>
-			<div
-				class="w-full text-center top-[211.5px] md:top-[406px] absolute  text-white text-[10px] md:text-4xl font-normal line-clamp-2">
-				<div class="w-10/12 mx-auto">
-					企业构建互联网信息技术服务平台，领先技术变革，提升产业效率，致力于使能软件企业引领发展，服务制造企业转型升级，为政企客户提供“多快好省”的信息技术服务。
+		<div class="slide relative">
+			<img class="w-full object-cover" src="./images/index/banner.png">
+			<div class="absolute top-[34%] w-full">
+				<div class="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold text-center">开启互联网+ 从我们开始</div>
+				<div class="text-white mt-7 text-xl md:text-1xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-normal">
+					<div class="w-[78%] mx-auto">企业构建互联网信息技术服务平台，领先技术变革，提升产业效率，致力于使能软件企业引领发展，服务制造企业转型升级，为政企客户提供“多快好省”的信息技术服务。</div>
 				</div>
 			</div>
 		</div>
-		<div class="w-5 h-[40px] md:h-[68px] left-[21px] md:left-[48px] top-[118px] md:top-[378px] absolute">
-			<div class="dot w-3 h-3 left-[4px] top-0 absolute rounded-full border border-zinc-400"
-				onclick="currentSlide(1)">
-			</div>
-			<div class="dot w-3 h-3 left-[4px] top-[24px] absolute rounded-full border border-zinc-400"
-				onclick="currentSlide(2)"></div>
-			<div class="dot w-3 h-3 left-[4px] top-[48px] absolute rounded-full border border-zinc-400"
-				onclick="currentSlide(3)"></div>
+		<div class="w-5 left-11 md:left-12 top-[55%] absolute flex flex-col items-center justify-center">
+			<svg class="w-3 h-3" xmlns="http://www.w3.org/200/svg" viewBox="22 22 44 44" onclick="currentSlide(1)">
+				<circle cx="44" cy="44" r="20" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round"></circle>
+				<circle class="dot" cx="44" cy="44" r="20" fill="none" stroke="white" stroke-width="2" stroke-dasharray="125.6,125.6" stroke-dashoffset="125.6"></circle>
+			</svg>
+			<svg class="w-3 h-3 mt-1" xmlns="http://www.w3.org/200/svg" viewBox="22 22 44 44" onclick="currentSlide(2)">
+				<circle cx="44" cy="44" r="20" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round"></circle>
+				<circle class="dot" cx="44" cy="44" r="20" fill="none" stroke="white" stroke-width="2" stroke-dasharray="125.6,125.6" stroke-dashoffset="125.6"></circle>
+			</svg>
+			<svg class="w-3 h-3 mt-1" xmlns="http://www.w3.org/200/svg" viewBox="22 22 44 44" onclick="currentSlide(3)">
+				<circle cx="44" cy="44" r="20" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round"></circle>
+				<circle class="dot" cx="44" cy="44" r="20" fill="none" stroke="white" stroke-width="2" stroke-dasharray="125.6,125.6" stroke-dashoffset="125.6"></circle>
+			</svg>
 		</div>
 	</section>
 

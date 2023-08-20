@@ -3,3 +3,18 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+svg {
+    transform: rotate(-90deg);
+}
+.progress {
+    animation: rotate 5s linear;
+}
+@keyframes rotate {
+    from {
+        stroke-dashoffset: 126px;
+    }
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
