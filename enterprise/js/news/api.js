@@ -47,4 +47,62 @@ function pageSizeChange() {
   console.log(pageSize.value)
   getNewsList(page, pageSize.value, 1)
 }
-getNewsList()
+
+function changePageNationStyle(newPage, oldPage) {
+  const pagenation = document.getElementById('pagenation');
+  pagenation.children[Number(oldPage)].classList.remove('text-orange-600');
+  pagenation.children[Number(oldPage)].classList.add('text-zinc-500');
+  pagenation.children[Number(newPage)].classList.remove('text-zinc-500');
+  pagenation.children[Number(newPage)].classList.add('text-orange-600');
+}
+
+function pageChange(newPage) {
+  const pageSize = document.getElementById('pageSizeSelect');
+  const page = new URLSearchParams(window.location.search).get('page') || 1;
+  changePageNationStyle(newPage, page);
+  getNewsList(newPage, pageSize.value, 1)
+}
+
+function nextPage() {
+  const pageSize = document.getElementById('pageSizeSelect');
+  const page = new URLSearchParams(window.location.search).get('page') || 1;
+  const newPage = Number(page) + 1;
+  changePageNationStyle(newPage, page);
+  getNewsList(newPage, pageSize.value, 1)
+}
+
+function prePage() {
+  const pageSize = document.getElementById('pageSizeSelect');
+  const page = new URLSearchParams(window.location.search).get('page') || 1;
+  let newPage = Number(page) - 1;
+  if (newPage === 0) {
+    return;
+  }
+  changePageNationStyle(newPage, page);
+  getNewsList(newPage, pageSize.value, 1)
+}
+
+function clickEnter(event) {
+  if (event.keyCode == 13) {
+    const val = document.getElementById('goPageNum').value;
+    if (val) {
+      pageChange(val)
+      // document.getElementById('goPageNum').value = ''
+    } else {
+      alert('弹幕不能为空')
+    }
+  }
+}
+
+function pageOnLoad() {
+  const page = new URLSearchParams(window.location.search).get('page') || 1;
+  const pageSize = new URLSearchParams(window.location.search).get('pageSize') || 8;
+  const pageSizeSelect = document.getElementById('pageSizeSelect');
+  pageSizeSelect.value = pageSize;
+  const pagenation = document.getElementById('pagenation');
+  pagenation.children[Number(page)].classList.remove('text-zinc-500');
+  pagenation.children[Number(page)].classList.add('text-orange-600');
+  getNewsList(page, pageSize);
+}
+
+pageOnLoad()

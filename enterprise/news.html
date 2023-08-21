@@ -78,35 +78,35 @@
         </div>
         <div class="w-3.5 h-3.5 relative"></div>
       </div>
-      <div class="justify-start items-start flex">
+      <div class="justify-start items-start flex" id="pagenation">
         <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="w-3.5 h-3.5 relative">
+          <div onclick="prePage()" class="w-3.5 h-3.5 relative  cursor-pointer">
             <img src="./images/global/pagenation/arrow-left.png" />
           </div>
         </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="text-center text-orange-600 text-sm font-bold leading-normal">1</div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex text-zinc-500">
+          <div onclick="pageChange(1)" class="text-center text-sm font-normal leading-normal cursor-pointer">1</div>
         </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">2</div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex text-zinc-500">
+          <div onclick="pageChange(2)" class="text-center text-sm font-normal leading-normal cursor-pointer">2</div>
         </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">3</div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex  text-zinc-500">
+          <div class="text-center text-sm font-normal leading-normal cursor-pointer">3</div>
         </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex  text-zinc-500">
+          <div class="text-center text-sm font-normal leading-normal cursor-pointer">4</div>
         </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">5</div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex  text-zinc-500">
+          <div class="text-center  text-sm font-normal leading-normal cursor-pointer">5</div>
         </div>
         <div class="p-2 relative">
           <div class="left-0 top-0 absolute text-center text-zinc-500 text-base font-normal leading-normal">...</div>
         </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="text-center text-zinc-500 text-sm font-normal leading-normal">100</div>
+        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex ">
+          <div class="text-center text-zinc-500 text-sm font-normal leading-normal cursor-pointer">100</div>
         </div>
-        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="w-3.5 h-3.5 relative">
+        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex ">
+          <div onclick="nextPage()" class="w-3.5 h-3.5 relative cursor-pointer">
             <img class="rotate-180" src="./images/global/pagenation/arrow-left.png" />
           </div>
         </div>
@@ -115,7 +115,7 @@
         <div class="text-zinc-500 text-sm font-normal leading-normal">前往</div>
         <div class="px-2 py-1 rounded-sm border border-zinc-200 flex-col justify-start items-start gap-2.5 inline-flex">
           <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">
-            <input class="w-full" value="4">
+            <input class="w-full" type="text" value="2" id="goPageNum" onkeydown="clickEnter(event);"/>
           </div>
         </div>
         <div class="text-zinc-500 text-sm font-normal leading-normal">页</div>
