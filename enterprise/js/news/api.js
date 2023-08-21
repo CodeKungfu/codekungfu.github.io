@@ -50,10 +50,10 @@ function pageSizeChange() {
 
 function changePageNationStyle(newPage, oldPage) {
   const pagenation = document.getElementById('pagenation');
-  pagenation.children[Number(oldPage)].classList.remove('text-orange-600');
-  pagenation.children[Number(oldPage)].classList.add('text-zinc-500');
-  pagenation.children[Number(newPage)].classList.remove('text-zinc-500');
-  pagenation.children[Number(newPage)].classList.add('text-orange-600');
+  pagenation.children[Number(oldPage) - 1].classList.remove('text-orange-600');
+  pagenation.children[Number(oldPage) - 1].classList.add('text-zinc-500');
+  pagenation.children[Number(newPage) - 1].classList.remove('text-zinc-500');
+  pagenation.children[Number(newPage) - 1].classList.add('text-orange-600');
 }
 
 function pageChange(newPage) {
@@ -100,8 +100,8 @@ function pageOnLoad() {
   const pageSizeSelect = document.getElementById('pageSizeSelect');
   pageSizeSelect.value = pageSize;
   const pagenation = document.getElementById('pagenation');
-  pagenation.children[Number(page)].classList.remove('text-zinc-500');
-  pagenation.children[Number(page)].classList.add('text-orange-600');
+  pagenation.children[Number(page) - 1].classList.remove('text-zinc-500');
+  pagenation.children[Number(page) - 1].classList.add('text-orange-600');
   getNewsList(page, pageSize);
 }
 

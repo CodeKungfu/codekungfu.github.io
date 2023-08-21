@@ -12,7 +12,7 @@
 <body>
   <!-- 头部导航 -->
   <header class="relative">
-		<div class="absolute top-0 left-0 z-10 w-full bg-zinc-800">
+		<div class="absolute top-0 left-0 z-10 w-full bg-black">
 			<div class="px-6 sm:px-12 py-6 sm:py-12 flex items-center justify-between">
 				<a href="./index.html" class="flex items-center cursor-pointer">
 					<img class="w-6 sm:w-10 h-6 sm:h-10 md:w-9 md:h-9" src="./images/index/logo.png" />
@@ -66,61 +66,47 @@
       </div>
     </div>
   </div>
-  <div class="relative text-center py-12">
-    <div class="justify-start items-center gap-4 inline-flex">
-      <div class="pl-4 pr-3 py-1 rounded-sm border border-zinc-200 justify-start items-center gap-3 flex">
-        <div class="justify-start items-start gap-1 flex">
-          <div class="text-zinc-500 text-sm font-normal leading-normal">
-            <select onchange="pageSizeChange()" name="pageSize" id="pageSizeSelect">
-              <option value="8">8</option>
-              <option value="12">12</option>
-            </select>
-          </div>
-          <div class="text-zinc-500 text-sm font-normal leading-normal">条/页</div>
-        </div>
-        <div class="w-3.5 h-3.5 relative"></div>
+  <div class="py-10 flex flex-col sm:flex-row items-center justify-center">
+    <div class="border mb-2 inline-block text-sm pl-4 py-1 pr-3 rounded">
+      <select onchange="pageSizeChange()" name="pageSize" id="pageSizeSelect" class="h-6">
+        <option value="8">8条/页</option>
+        <option value="12">12条/页</option>
+      </select>
+    </div>
+    <div class="mb-2 flex items-center mx-4">
+      <button onclick="prePage()" class="flex items-center justify-center w-8 h-8">
+        <img class="w-4 h-4" src="./images/global/pagenation/arrow-left.png" alt="">
+      </button>
+      <ul class="flex items-center" id="pagenation">
+        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+         <div onclick="pageChange(1)" class="px-2 cursor-pointer">1</div>
+        </li>
+        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+          <div onclick="pageChange(2)" class="px-2 cursor-pointer">2</div>
+        </li>
+        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+          <div class="px-2 cursor-pointer">3</div>
+        </li>
+        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+          <div class="px-2 cursor-pointer">4</div>
+        </li>
+        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+          <div class="px-2 cursor-pointer">5</div>
+        </li>
+        <li class="pflex-col justify-start items-start mx-1 inline-flex text-zinc-500 pb-2">...</li>
+        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">100</li>
+      </ul>
+      <button onclick="nextPage()" class="flex items-center justify-center w-8 h-8">
+        <img class="w-4 h-4 rotate-180" src="./images/global/pagenation/arrow-left.png" alt="">
+      </button>
+    </div>
+    <div class="flex items-center justify-center mb-2">
+      <div class="text-zinc-500 text-sm font-normal leading-normal">
+        前往
       </div>
-      <div class="justify-start items-start flex" id="pagenation">
-        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div onclick="prePage()" class="w-3.5 h-3.5 relative  cursor-pointer">
-            <img src="./images/global/pagenation/arrow-left.png" />
-          </div>
-        </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex text-zinc-500">
-          <div onclick="pageChange(1)" class="text-center text-sm font-normal leading-normal cursor-pointer">1</div>
-        </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex text-zinc-500">
-          <div onclick="pageChange(2)" class="text-center text-sm font-normal leading-normal cursor-pointer">2</div>
-        </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex  text-zinc-500">
-          <div class="text-center text-sm font-normal leading-normal cursor-pointer">3</div>
-        </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex  text-zinc-500">
-          <div class="text-center text-sm font-normal leading-normal cursor-pointer">4</div>
-        </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex  text-zinc-500">
-          <div class="text-center  text-sm font-normal leading-normal cursor-pointer">5</div>
-        </div>
-        <div class="p-2 relative">
-          <div class="left-0 top-0 absolute text-center text-zinc-500 text-base font-normal leading-normal">...</div>
-        </div>
-        <div class="px-3 py-1 flex-col justify-start items-start gap-2.5 inline-flex ">
-          <div class="text-center text-zinc-500 text-sm font-normal leading-normal cursor-pointer">100</div>
-        </div>
-        <div class="p-2 flex-col justify-start items-start gap-2.5 inline-flex ">
-          <div onclick="nextPage()" class="w-3.5 h-3.5 relative cursor-pointer">
-            <img class="rotate-180" src="./images/global/pagenation/arrow-left.png" />
-          </div>
-        </div>
-      </div>
-      <div class="h-8 rounded-sm justify-center items-center gap-2 flex">
-        <div class="text-zinc-500 text-sm font-normal leading-normal">前往</div>
-        <div class="px-2 py-1 rounded-sm border border-zinc-200 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">
-            <input class="w-full" type="text" value="2" id="goPageNum" onkeydown="clickEnter(event);"/>
-          </div>
-        </div>
-        <div class="text-zinc-500 text-sm font-normal leading-normal">页</div>
+      <input class="border w-14 h-8 rounded mx-2 text-center" type="number" min="1" value="2" id="goPageNum" onkeydown="clickEnter(event);">
+      <div class="text-zinc-500 text-sm font-normal leading-normal">
+        页
       </div>
     </div>
   </div>
