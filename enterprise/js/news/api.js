@@ -37,7 +37,7 @@ function getNewsList(page=1, pageSize=8, select=0) {
       history.pushState({
         page,
         pageSize
-      }, 'history', location.pathname)
+      }, 'history', `news.html?page=${page}&pageSize=${pageSize}`)
     }
   })
 }
