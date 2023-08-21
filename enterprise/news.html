@@ -53,9 +53,9 @@
   </header>
   <div class="relative">
     <div class="pt-48 md:pt-32 pb-12 relative">
-      <img class="w-[46.67%] ml-[27.76%]" src="./images/index/newslistpage.png">
+      <img class="w-[80%] md:w-[46.67%] ml-[10%] md:ml-[27.76%]" src="./images/index/newslistpage.png">
       <div class="text-center relative -mt-20">
-        <div class="w-full text-black text-5xl font-normal">新闻列表页</div>
+        <div class="w-full text-black text-xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal">新闻列表页</div>
         <div class="w-32 h-1.5 mx-auto mt-8 bg-orange-600 "></div>
       </div>
     </div>
@@ -68,7 +68,12 @@
     <div class="justify-start items-center gap-4 inline-flex">
       <div class="pl-4 pr-3 py-1 rounded-sm border border-zinc-200 justify-start items-center gap-3 flex">
         <div class="justify-start items-start gap-1 flex">
-          <div class="text-zinc-500 text-sm font-normal leading-normal">8</div>
+          <div class="text-zinc-500 text-sm font-normal leading-normal">
+            <select onchange="pageSizeChange()" name="pageSize" id="pageSizeSelect">
+              <option value="8">8</option>
+              <option value="12">12</option>
+            </select>
+          </div>
           <div class="text-zinc-500 text-sm font-normal leading-normal">条/页</div>
         </div>
         <div class="w-3.5 h-3.5 relative"></div>
@@ -109,7 +114,9 @@
       <div class="h-8 rounded-sm justify-center items-center gap-2 flex">
         <div class="text-zinc-500 text-sm font-normal leading-normal">前往</div>
         <div class="px-2 py-1 rounded-sm border border-zinc-200 flex-col justify-start items-start gap-2.5 inline-flex">
-          <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">4</div>
+          <div class="w-10 text-center text-zinc-500 text-sm font-normal leading-normal">
+            <input class="w-full" value="4">
+          </div>
         </div>
         <div class="text-zinc-500 text-sm font-normal leading-normal">页</div>
       </div>
@@ -129,7 +136,6 @@
 	</footer>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./js/global/nav.js"></script>
-  <!-- <script src="./js/news/index.js"></script> -->
   <script src="./js/news/api.js"></script>
 </body>
 
