@@ -31,6 +31,7 @@ class Barrage {
         if (!this.draw) {
           return;
         }
+        console.log('drawBarrage');
         this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         const viewList = this.getCurrentBarrage(); // 绘制弹幕
         viewList.forEach((val) => {
@@ -40,10 +41,10 @@ class Barrage {
             this.context.fillText(`${val.value} `, val.left, val.top);
             val.left -= val.speed;
         })
-        // viewList.length == 0 ? this.draw = false : requestAnimationFrame(this.drawBarrage.bind(this));
-        viewList.length == 0 ? this.draw = false : requestAnimationFrame(() => {
-          this.drawBarrage()
-        });
+        viewList.length == 0 ? this.draw = false : requestAnimationFrame(this.drawBarrage.bind(this));
+        // viewList.length == 0 ? this.draw = false : requestAnimationFrame(() => {
+        //   this.drawBarrage()
+        // });
     }
     // 添加弹幕
     addBarrage(val) {
@@ -57,9 +58,9 @@ class Barrage {
     genBarrage(val) {
         const color = ['#E0FFFF', '#FFE1FF', '#FFB5C5', '#F0FFF0', '#BFEFFF', '#63B8FF', '#FFFFFF'];
         const fontSize = Math.floor(Math.random() * 25) + 12; // 12 - 36
-        let top = Math.floor(Math.random() * this.canvasHeight);
+        let top = Math.floor(Math.random() * this.canvasHeight) + fontSize;
         if (top + fontSize > this.canvasHeight) { // 显示溢出屏幕, 回调高度
-            top = this.canvasHeight - fontSize - 10;
+            top = this.canvasHeight - fontSize * 2 - 10;
         }
         return {
           value: val, // 弹幕值
@@ -73,7 +74,50 @@ class Barrage {
     }
 }
 
-const barrage = new Barrage('myCanvas', 565, 377)
+class BarrageHistory extends Barrage {
+  constructor(canvas, canvasWidth, canvasHeight) {
+    super(canvas, canvasWidth, canvasHeight);
+    this.snapshot = [];
+  }
+  // 生成快照
+  genSnapshot() {
+    this.snapshot = [];
+    const shotlist = this.getCurrentBarrage();
+    shotlist.forEach((item) => {
+      this.snapshot.push({
+        ...item
+      });
+    });
+    console.log('genSnapshot', this.snapshot);
+  }
+  // 回放快照
+  playSnapshot() {
+    this.clearBarrage();
+    console.log('playSnapshot', this.snapshot);
+    this.snapshot.forEach((item) => {
+      this.barrageList.push({
+        ...item
+      });
+    });
+    this.draw = true;
+    this.drawBarrage();
+  }
+  // 清除快照
+  clearSnapshot() {
+    this.clearBarrage();
+    this.snapshot = [];
+  }
+}
+
+const barrage = new BarrageHistory('myCanvas', 565, 377)
+
+function storeSnapShot() {
+  barrage.genSnapshot();
+}
+
+function playSnapShot() {
+  barrage.playSnapshot();
+}
 
 function send() {
   const val = document.getElementById('txt').value;
