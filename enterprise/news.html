@@ -9,7 +9,7 @@
   <title>企业站</title>
 </head>
 
-<body>
+<body class="flex flex-col min-h-[100vh]">
   <!-- 头部导航 -->
   <header class="relative">
 		<div class="absolute top-0 left-0 z-10 w-full bg-black">
@@ -21,11 +21,11 @@
 				<nav class="hidden md:flex xl:mr-36 2xl:mr-48">
 					<a href="./index.html" class="mx-11">
 						<div class="text-white text-sm font-normal">首页</div>
-						<div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
+						<!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
 					</a>
 					<a href="./news.html" class="mx-11">
 						<div class="text-white text-sm font-normal">新闻列表页</div>
-						<!-- <div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div> -->
+						<div class="w-7 h-0.5 bg-orange-600 mt-2 mx-auto"></div>
 					</a>
 					<a href="./aboutus.html" class="mx-11">
 						<div class="text-white text-sm font-normal">关于我们</div>
@@ -53,60 +53,69 @@
 			</div>
 		</div>
 	</header>
-  <div class="relative">
+  <!-- <div class="relative flex-auto">
     <div class="pt-48 md:pt-32 pb-12 relative">
       <img class="w-[80%] md:w-[46.67%] ml-[10%] md:ml-[27.76%]" src="./images/index/newslistpage.png">
       <div class="text-center relative -mt-20">
         <div class="w-full text-black text-xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal">新闻列表页</div>
         <div class="w-32 h-1.5 mx-auto mt-8 bg-orange-600 "></div>
       </div>
+    </div> -->
+
+    <div class="pt-24 md:pt-44 pb-5 md:pb-10 relative">
+      <img class="w-3/4 md:w-[58.9%] ml-[12.5%] md:ml-[27.76%]" src="./images/index/newslistpage.png">
+      <div class="text-center relative -mt-4 md:-mt-10">
+          <div class="w-full text-black text-xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal slide-in-right">新闻列表页</div>
+          <div class="w-16 md:w-32 h-1.5 mx-auto mt-4 md:mt-8 bg-orange-600 "></div>
+      </div>
     </div>
+
     <div class="w-10/12 mx-auto">
       <div id="news-list" class="grid gap-y-10 grid-cols-2 md:grid-cols-4">
       </div>
     </div>
-  </div>
-  <div class="py-10 flex flex-col sm:flex-row items-center justify-center">
-    <div class="border mb-2 inline-block text-sm pl-4 py-1 pr-3 rounded">
-      <select onchange="pageSizeChange()" name="pageSize" id="pageSizeSelect" class="h-6">
-        <option value="8">8条/页</option>
-        <option value="12">12条/页</option>
-      </select>
-    </div>
-    <div class="mb-2 flex items-center mx-4">
-      <button onclick="prePage()" class="flex items-center justify-center w-8 h-8">
-        <img class="w-4 h-4" src="./images/global/pagenation/arrow-left.png" alt="">
-      </button>
-      <ul class="flex items-center" id="pagenation">
-        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
-         <div onclick="pageChange(1)" class="px-2 cursor-pointer">1</div>
-        </li>
-        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
-          <div onclick="pageChange(2)" class="px-2 cursor-pointer">2</div>
-        </li>
-        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
-          <div class="px-2 cursor-pointer">3</div>
-        </li>
-        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
-          <div class="px-2 cursor-pointer">4</div>
-        </li>
-        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
-          <div class="px-2 cursor-pointer">5</div>
-        </li>
-        <li class="pflex-col justify-start items-start mx-1 inline-flex text-zinc-500 pb-2">...</li>
-        <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">100</li>
-      </ul>
-      <button onclick="nextPage()" class="flex items-center justify-center w-8 h-8">
-        <img class="w-4 h-4 rotate-180" src="./images/global/pagenation/arrow-left.png" alt="">
-      </button>
-    </div>
-    <div class="flex items-center justify-center mb-2">
-      <div class="text-zinc-500 text-sm font-normal leading-normal">
-        前往
+    <div class="py-10 flex flex-col sm:flex-row items-center justify-center">
+      <div class="border mb-2 inline-block text-sm pl-4 py-1 pr-3 rounded">
+        <select onchange="pageSizeChange()" name="pageSize" id="pageSizeSelect" class="h-6">
+          <option value="8">8条/页</option>
+          <option value="12">12条/页</option>
+        </select>
       </div>
-      <input class="border w-14 h-8 rounded mx-2 text-center" type="number" min="1" value="2" id="goPageNum" onkeydown="clickEnter(event);">
-      <div class="text-zinc-500 text-sm font-normal leading-normal">
-        页
+      <div class="mb-2 flex items-center mx-4">
+        <button onclick="prePage()" class="flex items-center justify-center w-8 h-8">
+          <img class="w-4 h-4" src="./images/global/pagenation/arrow-left.png" alt="">
+        </button>
+        <ul class="flex items-center" id="pagenation">
+          <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+           <div onclick="pageChange(1)" class="px-2 cursor-pointer">1</div>
+          </li>
+          <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+            <div onclick="pageChange(2)" class="px-2 cursor-pointer">2</div>
+          </li>
+          <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+            <div class="px-2 cursor-pointer">3</div>
+          </li>
+          <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+            <div class="px-2 cursor-pointer">4</div>
+          </li>
+          <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">
+            <div class="px-2 cursor-pointer">5</div>
+          </li>
+          <li class="pflex-col justify-start items-start mx-1 inline-flex text-zinc-500 pb-2">...</li>
+          <li class="flex-col justify-start items-start mx-1 inline-flex text-zinc-500">100</li>
+        </ul>
+        <button onclick="nextPage()" class="flex items-center justify-center w-8 h-8">
+          <img class="w-4 h-4 rotate-180" src="./images/global/pagenation/arrow-left.png" alt="">
+        </button>
+      </div>
+      <div class="flex items-center justify-center mb-2">
+        <div class="text-zinc-500 text-sm font-normal leading-normal">
+          前往
+        </div>
+        <input class="border w-14 h-8 rounded mx-2 text-center" type="number" min="1" value="2" id="goPageNum" onkeydown="clickEnter(event);">
+        <div class="text-zinc-500 text-sm font-normal leading-normal">
+          页
+        </div>
       </div>
     </div>
   </div>
