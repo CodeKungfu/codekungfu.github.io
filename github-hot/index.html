@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="hooks/useIntersectionObserver.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/InfinityLoad.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/Load.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/Modal.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/Nav.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/LazyLoadWithSrcSet.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/Avatar.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/Item.js"></script>
+    <script data-plugins="transform-modules-umd" type="text/babel" data-presets="react" data-type="module" src="components/List.js"></script>
   </head>
   <body>
-
-    <div id="mydiv"></div>
-
-    <script type="text/babel">
-      function Hello() {
-        return <h1>Hello World!</h1>;
-      }
-
-      const container = document.getElementById('mydiv');
-      const root = ReactDOM.createRoot(container);
-      root.render(<Hello />)
-    </script>
-
+    <div id="root"></div>
+    <script src="./utils/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script data-plugins="transform-modules-umd"  type="text/babel" data-presets="react" data-type="module" src="./App.js"></script>
   </body>
 </html>
