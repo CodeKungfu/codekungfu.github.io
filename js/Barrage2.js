@@ -20,8 +20,9 @@ class Barrage {
         const output = [];
         for (let i = 0; i < this.barrageList.length; i++) {
             // 当弹幕的left(距离canvas左边的位置)+width弹幕自身宽度<=0时，说明弹幕已出屏幕, 不参加渲染, > 0时进行渲染
-            if (this.barrageList[i].left + this.barrageList[i].width > 0) {
-                output.push(this.barrageList[i]);
+            const barrageItem = this.barrageList[i];
+            if (barrageItem.left + barrageItem.width > 0) {
+                output.push(barrageItem);
             }
         }
         return output;
@@ -34,25 +35,28 @@ class Barrage {
         console.log('drawBarrage');
         this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         const viewList = this.getCurrentBarrage(); // 绘制弹幕
-        viewList.forEach((val) => {
+        if (viewList.length > 0) {
+          viewList.forEach((val) => {
             this.context.fillStyle = val.color; // 弹幕颜色
-            this.context.font = 'bold  ' + val.fontSize + 'px "microsoft yahei", sans-serif';
+            this.context.font = `bold ${val.fontSize}px "microsoft yahei", sans-serif`;
             val.width = val.width || Math.ceil(this.context.measureText(val.value).width); // 弹幕占用的宽度
             this.context.fillText(`${val.value} `, val.left, val.top);
             val.left -= val.speed;
-        })
-        viewList.length == 0 ? this.draw = false : requestAnimationFrame(this.drawBarrage.bind(this));
-        // viewList.length == 0 ? this.draw = false : requestAnimationFrame(() => {
-        //   this.drawBarrage()
-        // });
+          })
+          requestAnimationFrame(this.drawBarrage.bind(this))
+        } else {
+          this.draw = false;
+        }
     }
     // 添加弹幕
     addBarrage(val) {
+      if (val) {
         this.barrageList.push(this.genBarrage(val));
         if (!this.draw) { // 如果弹幕已经停止，重新开始渲染
             this.draw = true;
             this.drawBarrage();
         }
+      }
     }
     // 生成弹幕对象
     genBarrage(val) {
@@ -111,34 +115,36 @@ class BarrageHistory extends Barrage {
 
 const barrage = new BarrageHistory('myCanvas', 565, 377)
 
-function storeSnapShot() {
+const storeSnapShot = () => {
   barrage.genSnapshot();
-}
+};
 
-function playSnapShot() {
+const playSnapShot = () => {
   barrage.playSnapshot();
 }
+const inputElement = document.getElementById('txt');
 
-function send() {
-  const val = document.getElementById('txt').value;
+const send = () => {
+  const val = inputElement.value;
   if (val) {
     barrage.addBarrage(val)
   } else {
     alert('弹幕不能为空')
   }
 }
-function clearFn() {
+const clearFn = () => {
   barrage.clearBarrage()
 }
 
-function clickEnter(event) {
+const handleEnterKeyPress = (event) => {
   if (event.keyCode == 13) {
-    const val = document.getElementById('txt').value;
+    const val = inputElement.value;
     if (val) {
-      barrage.addBarrage(val)
-      document.getElementById('txt').value = ''
+      barrage.addBarrage(val);
+      inputElement.value = '';
     } else {
-      alert('弹幕不能为空')
+      alert('弹幕不能为空');
     }
   }
-}
+};
+inputElement.addEventListener('keydown', handleEnterKeyPress);
