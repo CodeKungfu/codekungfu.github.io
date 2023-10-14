@@ -4,24 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>弹幕墙</title>
-  <link rel="stylesheet" href="./css/barrageWall.css">
+  <link rel="stylesheet" href="./css/barrageWall.css" media="print" onload="this.media='all'">
 </head>
 
 <body>
+  <!-- 弹幕墙容器 -->
   <div class="barrage">
+    <!-- 背景图和弹幕画布 -->
     <img src="https://images.pexels.com/photos/2286895/pexels-photo-2286895.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
       alt="">
     <canvas id="myCanvas">
     </canvas>
   </div>
-  <!-- <div id="box" class="box"></div> -->
-  <input type="text" id="txt" onkeydown="clickEnter(event);"/>
+  <!-- 输入框和按钮 -->
+  <input type="text" id="txt"/>
   <button onclick="send()">发送弹幕</button>
   <button onclick="clearFn()">清空弹幕</button>
   <button onclick="storeSnapShot()">生成快照</button>
   <button onclick="playSnapShot()">回放快照</button>
   <button onclick="clearSnapshot()">清除快照</button>
-  <script src="./js/Barrage2.js"></script>
+  <script src="./js/Barrage2.js" defer></script>
 </body>
 
 </html>
